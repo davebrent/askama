@@ -13,7 +13,10 @@ before_script:
 script:
 - cargo test --all
 - if [[ "${TRAVIS_RUST_VERSION}" == stable ]]; then
-    cd testing && cargo test --features full && cargo fmt -- --check;
+    cd testing &&
+        cargo test --features full &&
+        cargo fmt -- --check &&
+        cargo test --features with-gotham;
   fi
 - if [[ "${TRAVIS_RUST_VERSION}" == nightly ]]; then
     cd testing && cargo test --features with-rocket;

@@ -69,7 +69,7 @@ mod tests {
     use super::TemplateIntoResponse;
 
     #[derive(Template)]
-    #[template(path = "../../testing/templates/hello.html")]
+    #[template(path = "hello.html")]
     struct HelloTemplate<'a> {
         name: &'a str,
     }

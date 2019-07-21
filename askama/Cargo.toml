@@ -22,6 +22,7 @@ maintenance = { status = "actively-developed" }
 default = []
 serde-json = ["askama_shared/serde_json"]
 serde-yaml = ["askama_shared/serde_yaml"]
+with-actix-web = ["askama_derive/actix-web"]
 with-iron = ["iron", "askama_derive/iron"]
 with-rocket = ["rocket", "askama_derive/rocket"]
 with-gotham = ["gotham", "askama_derive/gotham", "hyper", "mime", "mime_guess"]
